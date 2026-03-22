@@ -25,6 +25,7 @@ type Member = {
   name: string;
   color: string;
   availability: TimeSlot[];
+  isMandatory: boolean;
 };
 
 // ─── Constants ────────────────────────────────────────────────────────────────
@@ -69,6 +70,7 @@ const INITIAL_MEMBERS: Member[] = [
       slot(2, 14), slot(2, 15), slot(2, 16),         // Wed 14–17
       slot(4, 9),  slot(4, 10),                      // Fri 9–11
     ],
+    isMandatory: true,
   },
   {
     id: "lu-lu",
@@ -79,6 +81,7 @@ const INITIAL_MEMBERS: Member[] = [
       slot(2, 9),  slot(2, 10), slot(2, 11),         // Wed 9–12（共同）
       slot(3, 14), slot(3, 15),                      // Thu 14–16
     ],
+    isMandatory: false,
   },
 ];
 
